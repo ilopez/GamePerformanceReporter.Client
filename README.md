@@ -16,19 +16,22 @@ Well first off it wont fix anything, it will just track the performance of the v
 
 # Examples #
 
-![](PlanetSide2_2014-03-13_07-04-47_GRAPH_.PNG)
-![](PlanetSide2_2014-03-13_07-04-47_GAME_.PNG)
+![](http://i.imgur.com/xGJFvJv.png)
+![](http://i.imgur.com/R6LcZBF.png)
 
 # Requirements #
 - Microsoft .NET 4.5 Client Profile
-- MSI Afterburner
-- PlanetSide 2
+- [MSI Afterburner](http://event.msi.com/vga/afterburner/download.htm)
+
 
 # Downloads #
 
 You can download from here: http://client.gpr.ilopez.com/latest/GamePerformanceReporter.zip
 
 # Change Log #
+
+## 2014-03-14 ##
+- Added Digital Code Signing 
 
 ## 2014-03-13 ##
 - Added support for Minecraft and Star Wars Empire At War - Forces of Corruption
@@ -38,6 +41,8 @@ You can download from here: http://client.gpr.ilopez.com/latest/GamePerformanceR
 
 # Additional Notes #
 
+## UAC ##
+
 You may be prompted to allow this application to make changes.  This is because I need to determine if MSI Afterburner is running, and to search the whole process list I need Administrator access.  However, it does not change anything on your system.
 
 It would look similar to this:
@@ -45,6 +50,13 @@ It would look similar to this:
 ![](UACPrompt.png)
 
 Do not download this app from anywhere except the link above.  I cannot guarantee it was not tampered with.  Later I will provide signed builds for verification.
+
+## MSI Afterburner ##
+
+Make sure that MSI Afterburner is setup to poll hardware every 100ms, and ensure that Framerate is checked to track.  You do not need to setup logging. 
+
+Setup Steps:
+![](setup_msi_afterburner.gif)
 
 # Where To Get Help #
 
