@@ -113,7 +113,7 @@ namespace GamePerfReporter
             this.velocityTrend = new FixedSizedQueue<Velocity>(recentSize);
             this.avgData = new FixedSizedQueue<FPS>(recentSize);
 
-            FPSAverageSUM = new double[recentSize/6];
+            FPSAverageSUM = new double[recentSize/5];
             FPSAverageSUMIndex = 0;
             this.velocityData = new FixedSizedQueue<FPS>(5);
 

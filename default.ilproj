@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Switches-->
+  <CopyAttributes Enabled="true" />
+  <UnionDuplicates Enabled="false" />
+  <Debug Enabled="1" />
+  <Internalize Enabled="false" />
+  <MergeXml Enabled="false" />
+  <!--Signing-->
+  <Sign Enabled="false" Delay="false"></Sign>
+  <!--Logging-->
+  <Log Enabled="false"></Log>
+  <!--Assemblies-->
+  <Assemblies>
+    <Assembly>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\GamePerfReporter.exe</Assembly>
+    <Assembly>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\MSIAfterburner.NET.dll</Assembly>
+    <Primary>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\GamePerfReporter.exe</Primary>
+  </Assemblies>
+  <!--Output-->
+  <OutputAssembly>G:\GamePerfReporter\Builds\latest\GamePerformanceReporter.exe</OutputAssembly>
+  <!--.NET Framework-->
+  <Framework>.NET Framework 4.5 Full</Framework>
+  <!--Merge Engine-->
+  <Engine Name="ILMerge" />
+</Settings>

@@ -27,7 +27,7 @@ namespace GamePerfReporter
         private static Boolean MSIAfterburnerAvailable = false;
         private static Boolean logLiveFPS = true;
         private static Boolean updateFPSDisplays = true;
-        private static Telemetry fpsdata = new Telemetry(1000,1000,.65,.85);
+        private static Telemetry fpsdata = new Telemetry(1000,3000,.65,.85);
         private static RTSS rt = null;
 
         public Form1()
@@ -510,15 +510,27 @@ The MSI Afterburner .NET library is included with the permission of the author, 
             }
 
             // Take a screenshot
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"\\";
-            String dte = string.Format("{0:yyyy-MM-dd_hh-mm-ss}", DateTime.Now);
-            String file = currentGame.Name + "_" + dte +  "_GRAPH_" + ".PNG" ;
-            chartFPS.SaveImage(path + file, ChartImageFormat.Png);
-            String ss = currentGame.Name + "_" + dte + "_GAME_" + ".PNG" ;
-            Program.takeScreenshot(Program.gameProcessID , path + ss);
+            TakeScreenshots();
 
 
             e.Handled = true;
+        }
+
+        private void TakeScreenshots()
+        {
+            try
+            {
+                String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\";
+                String dte = string.Format("{0:yyyy-MM-dd_hh-mm-ss}", DateTime.Now);
+                String file = currentGame.Name + "_" + dte + "_GRAPH_" + ".PNG";
+                chartFPS.SaveImage(path + file, ChartImageFormat.Png);
+                String ss = currentGame.Name + "_" + dte + "_GAME_" + ".PNG";
+                Program.takeScreenshot(Program.gameProcessID, path + ss);
+            }
+            catch
+            {
+                // If there is an exception, ignore it for now.
+            }
         } 
 
         private void ckUpdateScreen_CheckedChanged(object sender, EventArgs e)

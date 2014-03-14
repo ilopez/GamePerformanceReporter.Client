@@ -14,11 +14,11 @@ namespace GamePerfReporter
         {
             List<Game> games = new List<Game>();
 
-            Game planetsidetwo = new Game("PlanetSide 2", "PlanetSide2.exe",
-            new List<String>() { "/UserOptions.ini","/Graphics.ini" }
-            );
 
-            games.Add(planetsidetwo);
+
+            games.Add(new Game("PlanetSide 2", "PlanetSide2.exe", new List<String>() { "/UserOptions.ini", "/Graphics.ini" }));
+            games.Add(new Game("Star Wars: Empire At War - Forces of Corruption", "swfoc.exe", new List<String>()));
+            games.Add(new Game("Minecraft", "javaw.exe", new List<String>()));
 
             return new Games(games);
 
