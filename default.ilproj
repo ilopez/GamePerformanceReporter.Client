@@ -7,17 +7,22 @@
   <Internalize Enabled="false" />
   <MergeXml Enabled="false" />
   <!--Signing-->
-  <Sign Enabled="false" Delay="false"></Sign>
+  <Sign Enabled="true" Delay="false">Z:\Dropbox\git\GamePerfReporter\client\GamePerfReporter\GamePerformanceReporter.snk</Sign>
   <!--Logging-->
   <Log Enabled="false"></Log>
   <!--Assemblies-->
   <Assemblies>
-    <Assembly>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\GamePerfReporter.exe</Assembly>
-    <Assembly>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\MSIAfterburner.NET.dll</Assembly>
-    <Primary>G:\GamePerfReporter\client\GamePerfReporter\bin\Debug\GamePerfReporter.exe</Primary>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\FishbowlReportTools.exe</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\DiffieHellman.dll</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\FirebirdSql.Data.FirebirdClient.dll</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\FishbowlAPI.Lite.dll</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\Org.Mentalis.Security.dll</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\Tamir.SharpSSH.dll</Assembly>
+    <Assembly>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\EPPlus.dll</Assembly>
+    <Primary>G:\FishbowlReportTools\FishbowlReportTools\bin\Release\FishbowlReportTools.exe</Primary>
   </Assemblies>
   <!--Output-->
-  <OutputAssembly>G:\GamePerfReporter\Builds\latest\GamePerformanceReporter.exe</OutputAssembly>
+  <OutputAssembly>G:\FishbowlReportTools\website\PackagedFishbowlReportTools.exe</OutputAssembly>
   <!--.NET Framework-->
   <Framework>.NET Framework 4.5 Full</Framework>
   <!--Merge Engine-->

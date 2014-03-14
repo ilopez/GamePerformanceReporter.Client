@@ -66,11 +66,11 @@ namespace GamePerfReporter
                 UploadLog("Dx Diag Data Ready");
             }
 
-            byte[] package = Program.packageUploadData(gameFiles, RTSSData, DXDiagData);
+            //byte[] package = Program.packageUploadData(gameFiles, RTSSData, DXDiagData);
 
-            UploadLog("File To Upload Size: " + package.LongLength.ToString());
+            //UploadLog("File To Upload Size: " + package.LongLength.ToString());
 
-            UploadLog("Preparing to Submit Report");
+            //UploadLog("Preparing to Submit Report");
 
 
             

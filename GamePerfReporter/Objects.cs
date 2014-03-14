@@ -1,4 +1,4 @@
-﻿using MathNet.Numerics.Statistics;
+﻿
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -123,10 +123,10 @@ namespace GamePerfReporter
             this.siLog = new StringBuilder();
         }
 
-        public SortedDictionary<String, double> getRecentFPSHistogram(int totalbins)
-        {
-            return this.Histo(this.fpsData.Select(l => Convert.ToDouble(l.FPSData)).ToList(), totalbins);
-        }
+        //public SortedDictionary<String, double> getRecentFPSHistogram(int totalbins)
+        //{
+        //    return this.Histo(this.fpsData.Select(l => Convert.ToDouble(l.FPSData)).ToList(), totalbins);
+        //}
 
         public void SuspectedIssueLog()
         {
@@ -270,18 +270,18 @@ namespace GamePerfReporter
             this.fpsLog.AppendLine(d.MS.ToString() + "," + d.FPSData.ToString());
         }
 
-        internal SortedDictionary<String, double> Histo(IEnumerable<double> source, int totalbins)
-        {
-            SortedDictionary<String, double> ret = new SortedDictionary<string, double>();
-            var h = new Histogram(source, totalbins);
-            for (int i = 0; i < h.BucketCount; i++ )
-            {
-                Bucket b = h[i];
-                ret.Add(i.ToString() + ": " +Math.Round(b.LowerBound,2).ToString() + "-" + Math.Round(b.UpperBound,2).ToString(), b.Count );
-            }
+        //internal SortedDictionary<String, double> Histo(IEnumerable<double> source, int totalbins)
+        //{
+        //    SortedDictionary<String, double> ret = new SortedDictionary<string, double>();
+        //    var h = new Histogram(source, totalbins);
+        //    for (int i = 0; i < h.BucketCount; i++ )
+        //    {
+        //        Bucket b = h[i];
+        //        ret.Add(i.ToString() + ": " +Math.Round(b.LowerBound,2).ToString() + "-" + Math.Round(b.UpperBound,2).ToString(), b.Count );
+        //    }
             
-            return ret;
-        }
+        //    return ret;
+        //}
 
     }
 

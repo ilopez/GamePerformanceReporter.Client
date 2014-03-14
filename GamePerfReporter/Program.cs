@@ -1,4 +1,4 @@
-﻿using Ionic.Zip;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -233,34 +233,34 @@ namespace GamePerfReporter
             return File.ReadAllBytes(RTSSLogFile);
         }
 
-        internal static byte[] packageUploadData(Dictionary<string, byte[]> gameFiles, byte[] RTSSData, string DXDiagData)
-        {
-            using(MemoryStream ms = new MemoryStream())
-            {
-                using (ZipFile z = new ZipFile())
-                {
-                    if (gameFiles.Count > 0)
-                    {
-                        foreach (KeyValuePair<string, byte[]> kvp in gameFiles)
-                        {
-                            z.AddEntry(kvp.Key, kvp.Value);
-                        }
-                    }
-                    if (RTSSData != null && RTSSData.Length > 0)
-                    {
-                        z.AddEntry("RTSS.csv", RTSSData);
-                    }
-                    if (DXDiagData != null && DXDiagData.Length > 0)
-                    {
-                        z.AddEntry("dxdiag.xml", DXDiagData);
-                    }
+        //internal static byte[] packageUploadData(Dictionary<string, byte[]> gameFiles, byte[] RTSSData, string DXDiagData)
+        //{
+        //    using (MemoryStream ms = new MemoryStream())
+        //    {
+        //        using (ZipFile z = new ZipFile())
+        //        {
+        //            if (gameFiles.Count > 0)
+        //            {
+        //                foreach (KeyValuePair<string, byte[]> kvp in gameFiles)
+        //                {
+        //                    z.AddEntry(kvp.Key, kvp.Value);
+        //                }
+        //            }
+        //            if (RTSSData != null && RTSSData.Length > 0)
+        //            {
+        //                z.AddEntry("RTSS.csv", RTSSData);
+        //            }
+        //            if (DXDiagData != null && DXDiagData.Length > 0)
+        //            {
+        //                z.AddEntry("dxdiag.xml", DXDiagData);
+        //            }
 
-                    z.Save(ms);
-                }
-                return ms.ToArray();    
-            }
+        //            z.Save(ms);
+        //        }
+        //        return ms.ToArray();
+        //    }
 
-        }
+        //}
 
 
 
